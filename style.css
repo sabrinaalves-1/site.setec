@@ -95,3 +95,31 @@
     margin-top: 40px;
   }
   
+
+header {
+  background-image: url('fundo.jpg'); /* Troque para o nome correto se for outro */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Escurece a imagem para facilitar leitura */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* escurece a imagem */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1; /* garante que texto e logo fiquem acima da imagem */
+}
