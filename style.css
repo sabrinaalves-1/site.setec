@@ -5,11 +5,12 @@
   }
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: white;
-    line-height: 1.6;
-  }
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  line-height: 1.6;
+}
+
   .logo {
     display: block;
     margin: 0 auto 20px auto;
