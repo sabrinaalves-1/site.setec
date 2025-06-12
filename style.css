@@ -134,3 +134,35 @@ header * {
   position: relative;
   z-index: 1; /* garante que texto e logo fiquem acima da imagem */
 }
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #00ffff;
+  background-color: #e0ffff33;
+}
+
+form label {
+  font-weight: 600;
+  text-align: left;
+}
+
+form button.btn-inscricao {
+  background: #00ffff;
+  color: #000;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button.btn-inscricao:hover {
+  background: #00cccc;
+}
