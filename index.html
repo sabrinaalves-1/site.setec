@@ -10,6 +10,12 @@
 
 <body>
 
+  <!-- Bem vindo no topo -->
+  <section class="welcome" style="text-align:center; padding: 40px 20px; color: white; background: #203a43;">
+    <h2>Bem vindo!</h2>
+  </section>
+
+  <!-- Header SETEC 2025 -->
   <header>
     <img src="logo.jpg" alt="Logo do Colégio" class="logo" />
     <h1>SETEC 2025</h1>
@@ -17,36 +23,71 @@
       Em novembro | salas de aula ou quadra</p>
   </header>
 
-  <section>
-    <h2>✨ Tema: "Tecnologia e Inteligência artifical"</h2>
+  <!-- Introdução com botão Inscreva-se -->
+  <section style="text-align:center; padding: 30px 20px; background: #2c5364; color: white;">
     <p>Participe da SETEC e viva uma jornada de inovação, criatividade e tecnologia!</p>
+    <a href="#form-inscricao" class="btn-inscricao" style="margin-top:20px; display:inline-block;">🎟️ Inscreva-se Agora</a>
+  </section>
 
-   <div class="destaques">
-    <div class="card">
-      <h3>🤖 atividades lógicas</h3>
-      <p>Resolva desafios reais em equipe e mostre seu talento!</p>
-      <img src="setec.jpg" alt="Hackathon Escolar" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>🎮 Arena Gamer</h3>
-      <p>Competições, realidade virtual e muita diversão garantida!</p>
-      <img src="setec1.jpg" alt="Arena Gamer" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>💡 Oficinas Práticas</h3>
-      <p>Robótica, Programação, Impressão 3D e mais atividades hands-on.</p>
-      <img src="setec2.jpg" alt="Oficinas Práticas" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>🎙️ palestrantes</h3>
-      <p>Profissionais da área tech compartilhando experiências incríveis.</p>
-      <img src="setec3.jpg" alt="Palestrantes" class="card-img" />
-    </div>
-</div>
+  <!-- Tema e imagens -->
+  <section>
+    <h2>✨ Tema: "Tecnologia e Inteligência Artificial"</h2>
 
-<!-- Agora o botão vem depois das imagens, fora da div .destaques -->
-<a href="#" class="btn-inscricao">🎟️ Inscreva-se Agora</a>
+    <div class="destaques">
+      <div class="card">
+        <h3>🤖 Atividades Lógicas</h3>
+        <p>Resolva desafios reais em equipe e mostre seu talento!</p>
+        <img src="setec.jpg" alt="Hackathon Escolar" class="card-img" />
+      </div>
+      <div class="card">
+        <h3>🎮 Arena Gamer</h3>
+        <p>Competições, realidade virtual e muita diversão garantida!</p>
+        <img src="setec1.jpg" alt="Arena Gamer" class="card-img" />
+      </div>
+      <div class="card">
+        <h3>💡 Oficinas Práticas</h3>
+        <p>Robótica, Programação, Impressão 3D e mais atividades hands-on.</p>
+        <img src="setec2.jpg" alt="Oficinas Práticas" class="card-img" />
+      </div>
+      <div class="card">
+        <h3>🎙️ Palestrantes</h3>
+        <p>Profissionais da área tech compartilhando experiências incríveis.</p>
+        <img src="setec3.jpg" alt="Palestrantes" class="card-img" />
+      </div>
+    </div>
+  </section>
 
+  <!-- Sobre a SETEC -->
+  <section style="padding: 40px 20px; background: rgba(255,255,255,0.1); color: white; text-align:center;">
+    <h2>Sobre a SETEC</h2>
+    <p>A Semana de Tecnologia do Colégio Estadual Barbosa Ferraz é um evento anual que visa estimular o interesse dos estudantes pela inovação, programação, robótica e demais áreas tecnológicas. Com oficinas práticas, competições e palestras, a SETEC prepara jovens para os desafios do futuro.</p>
+  </section>
+
+  <!-- Formulário de inscrição -->
+  <section id="form-inscricao" style="padding: 40px 20px; color: white; background: #203a43; max-width: 500px; margin: 40px auto; border-radius: 10px;">
+    <h2>Preencha o formulário para se inscrever</h2>
+
+    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      <label for="nome">Nome completo*</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" />
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com" />
+
+      <label for="telefone">Telefone*</label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999" />
+
+      <label for="serie">Série (se estudante)</label>
+      <select id="serie" name="serie">
+        <option value="">Não sou estudante</option>
+        <option value="1° ano">1° ano</option>
+        <option value="2° ano">2° ano</option>
+        <option value="3° ano">3° ano</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <button type="submit" class="btn-inscricao" style="align-self: center; max-width: 200px;">Enviar</button>
+    </form>
   </section>
 
   <footer>
