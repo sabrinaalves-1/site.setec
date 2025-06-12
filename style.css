@@ -282,25 +282,39 @@ form button.btn-inscricao:hover {
   padding: 0 20px;
 }
 
-.area-botoes-robos .robo {
-  width: 120px;
+.area-botoes-robos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
+  flex-wrap: nowrap;
+}
+
+.botoes-centrais {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.robo {
+  width: 130px;
   height: auto;
 }
 
+/* Responsividade para celular */
 @media (max-width: 768px) {
   .area-botoes-robos {
     flex-direction: column;
-    gap: 20px;
   }
 
-  .area-botoes-robos .robo {
+  .robo {
     width: 100px;
   }
 
-  .botoes-tipo {
+  .botoes-centrais {
     flex-direction: column;
   }
 }
-
 }
 
