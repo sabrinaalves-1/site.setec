@@ -10,14 +10,14 @@
 
 <body>
 
- <header>
+<header>
   <img src="logo.jpg" alt="Logo do Colégio" class="logo" />
-  <h1 style="color:#00ffff; font-weight:700; margin-bottom: 10px;">Bem vindo!</h1>
+  <h1>Bem vindo!</h1>
   <h2>SETEC 2025</h2>
   <p>Semana de Tecnologia do Colégio Estadual Barbosa Ferraz<br>
     Em novembro | salas de aula ou quadra</p>
    
-  <a href="#form-inscricao" class="btn-inscricao" style="margin-top: 30px; display: inline-block; background: rgba(255,255,255,0.1); color: white; border: 2px solid #00ffff;">
+  <a href="#form-inscricao" class="btn-inscricao">
     🎟️ Inscreva-se Agora
   </a>
 </header>
@@ -31,13 +31,6 @@
 <!-- Tema -->
 <section class="secao-tema-sobre">
   <h2>✨ Tema: "Tecnologia e Inteligência Artificial"</h2>
-
-  <div class="destaques">
-    <!-- seus cards aqui -->
-  </div>
-</section>
-
-
   <div class="destaques">
     <div class="card">
       <h3>🤖 Atividades Lógicas</h3>
@@ -62,15 +55,23 @@
   </div>
 </section>
 
-<h2>Preencha o formulário para se inscrever</h2>
+<!-- Título do formulário -->
+<section class="secao-formulario">
+  <h2>Preencha o formulário para se inscrever</h2>
+</section>
 
-<div class="opcoes-inscricao">
+<!-- Opções de inscrição -->
+<div class="opcoes-inscricao" id="form-inscricao">
   <input type="radio" name="tipo" id="aluno" hidden>
   <input type="radio" name="tipo" id="visitante" hidden>
 
-  <div class="botoes-tipo">
-    <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
-    <label for="visitante" class="btn-inscricao">Sou visitante</label>
+  <div class="decoracao-robos">
+    <img src="robo1.png" alt="Robô" class="robo robo-esquerda">
+    <div class="botoes-tipo">
+      <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
+      <label for="visitante" class="btn-inscricao">Sou visitante</label>
+    </div>
+    <img src="robo2.png" alt="Robô" class="robo robo-direita">
   </div>
 
   <!-- Formulário para Aluno -->
