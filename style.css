@@ -1,115 +1,27 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
   line-height: 1.6;
 }
 
-  .logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 50%; /* recorta a imagem em formato circular */
-    background: white; /* ou outra cor para destacar o recorte */
-    padding: 10px; /* opcional, para deixar um “moldura” branca */
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  }
-  
-  header {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 3em;
-    color: #00ffff;
-  }
-  header h2 {
-  font-size: 2em;
-  color: #00ffff;
-  font-weight: 700;
-  margin-bottom: 10px;
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
-
-  header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-  }
-  
-  .btn-inscricao {
-    margin: 40px auto 0 auto; /* maior margem em cima para espaçar */
-    display: inline-block;
-    background: #00ffff;
-    color: #000;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-inscricao:hover {
-    background: #00cccc;
-  }
-  
-  
-  section {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .destaques {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-  align-items: stretch; /* força cards com mesma altura */
-}
-
-  
-  .card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 350xp
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-  
-  .card h3 {
-    color: #00ffff;
-    margin-bottom: 10px;
-  }
- 
-.card-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    font-size: 0.9em;
-    margin-top: 40px;
-  }
-  
 
 header {
   background-image: url('fundo.jpg'); 
@@ -120,11 +32,10 @@ header {
   text-align: center;
   position: relative;
   color: white;
-  image-rendering: auto; /* padrão */
+  image-rendering: auto;
   -webkit-image-rendering: auto;
 }
 
-/* Escurece a imagem para facilitar leitura */
 header::before {
   content: "";
   position: absolute;
@@ -132,14 +43,95 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* escurece a imagem */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
 header * {
   position: relative;
-  z-index: 1; /* garante que texto e logo fiquem acima da imagem */
+  z-index: 1;
 }
+
+header h1 {
+  font-size: 3em;
+  color: #00ffff;
+}
+
+header h2 {
+  font-size: 2em;
+  color: #00ffff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.btn-inscricao {
+  margin: 40px auto 0 auto;
+  display: inline-block;
+  background: #00ffff;
+  color: #000;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-inscricao:hover {
+  background: #00cccc;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.destaques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px; /* corrigido de '350xp' para '350px' */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
 input, select {
   padding: 10px;
   border-radius: 6px;
@@ -172,9 +164,48 @@ form button.btn-inscricao {
 form button.btn-inscricao:hover {
   background: #00cccc;
 }
+
 .secao-tema-sobre {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
   padding: 40px 20px;
+}
+
+/* -------- NOVO CSS para múltiplos formulários -------- */
+.opcoes-inscricao {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.botoes-tipo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Mostra o formulário de aluno */
+#aluno:checked ~ .botoes-tipo + #form-aluno {
+  display: flex;
+}
+
+/* Mostra o formulário de visitante */
+#visitante:checked ~ .botoes-tipo + #form-aluno + #form-visitante {
+  display: flex;
+}
+
+/* Título do formulário */
+.formulario h3 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 10px;
 }
