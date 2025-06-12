@@ -90,6 +90,11 @@ section {
   text-align: center;
 }
 
+.secao-tema-sobre {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+}
+
 .destaques {
   display: flex;
   flex-wrap: wrap;
@@ -165,31 +170,16 @@ form button.btn-inscricao:hover {
   background: #00cccc;
 }
 
-.secao-tema-sobre {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
 .secao-formulario h2 {
   text-align: center;
   margin-top: 40px;
   color: #00ffff;
 }
 
-/* -------- CSS para formulários -------- */
 .opcoes-inscricao {
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
-}
-
-.botoes-tipo {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
 }
 
 .formulario {
@@ -200,11 +190,11 @@ form button.btn-inscricao:hover {
   padding: 20px;
 }
 
-#aluno:checked ~ .decoracao-robos + #form-aluno {
+#aluno:checked ~ .area-botoes-robos + #form-aluno {
   display: flex;
 }
 
-#visitante:checked ~ .decoracao-robos + #form-aluno + #form-visitante {
+#visitante:checked ~ .area-botoes-robos + #form-aluno + #form-visitante {
   display: flex;
 }
 
@@ -214,97 +204,33 @@ form button.btn-inscricao:hover {
   margin-bottom: 10px;
 }
 
-/* -------- Robôs decorativos -------- */
-.decoracao-robos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.robo {
-  width: 60px;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .destaques {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    height: auto;
-  }
-
-  .botoes-tipo {
-    flex-direction: column;
-  }
-
-  .formulario {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 2em;
-  }
-
-  header h2 {
-    font-size: 1.5em;
-  }
-
-  .btn-inscricao {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-
-  input, select {
-    font-size: 0.95em;
-  }
-
-  form button.btn-inscricao {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-
-  /* Área com robôs laterais */
-.area-botoes-robos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  padding: 0 20px;
-}
-
+/* Robôs nas laterais */
 .area-botoes-robos {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin: 30px auto;
+  margin-bottom: 30px;
   flex-wrap: nowrap;
 }
 
 .botoes-centrais {
   display: flex;
-  gap: 20px;
   flex-direction: row;
+  gap: 20px;
 }
 
 .robo {
-  width: 130px;
+  width: 140px;
   height: auto;
 }
 
-/* Responsividade para celular */
 @media (max-width: 768px) {
   .area-botoes-robos {
+    flex-direction: column;
+  }
+
+  .botoes-centrais {
     flex-direction: column;
   }
 
@@ -312,9 +238,9 @@ form button.btn-inscricao:hover {
     width: 100px;
   }
 
-  .botoes-centrais {
-    flex-direction: column;
+  .card {
+    width: 90%;
+    height: auto;
   }
-}
 }
 
