@@ -32,8 +32,6 @@ header {
   text-align: center;
   position: relative;
   color: white;
-  image-rendering: auto;
-  -webkit-image-rendering: auto;
 }
 
 header::before {
@@ -79,6 +77,8 @@ header p {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-inscricao:hover {
@@ -107,7 +107,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px; /* corrigido de '350xp' para '350px' */
+  height: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,7 +172,13 @@ form button.btn-inscricao:hover {
   padding: 40px 20px;
 }
 
-/* -------- NOVO CSS para múltiplos formulários -------- */
+.secao-formulario h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #00ffff;
+}
+
+/* -------- CSS para formulários -------- */
 .opcoes-inscricao {
   max-width: 500px;
   margin: 0 auto;
@@ -191,21 +197,83 @@ form button.btn-inscricao:hover {
   flex-direction: column;
   gap: 15px;
   text-align: left;
+  padding: 20px;
 }
 
-/* Mostra o formulário de aluno */
-#aluno:checked ~ .botoes-tipo + #form-aluno {
+#aluno:checked ~ .decoracao-robos + #form-aluno {
   display: flex;
 }
 
-/* Mostra o formulário de visitante */
-#visitante:checked ~ .botoes-tipo + #form-aluno + #form-visitante {
+#visitante:checked ~ .decoracao-robos + #form-aluno + #form-visitante {
   display: flex;
 }
 
-/* Título do formulário */
 .formulario h3 {
   text-align: center;
   color: #00ffff;
   margin-bottom: 10px;
 }
+
+/* -------- Robôs decorativos -------- */
+.decoracao-robos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.robo {
+  width: 60px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .destaques {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .botoes-tipo {
+    flex-direction: column;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header h2 {
+    font-size: 1.5em;
+  }
+
+  .btn-inscricao {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  input, select {
+    font-size: 0.95em;
+  }
+
+  form button.btn-inscricao {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .robo {
+    width: 40px;
+  }
+}
+
