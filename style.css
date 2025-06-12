@@ -172,3 +172,9 @@ form button.btn-inscricao {
 form button.btn-inscricao:hover {
   background: #00cccc;
 }
+.secao-tema-sobre {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
