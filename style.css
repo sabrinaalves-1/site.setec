@@ -33,7 +33,13 @@
     font-size: 3em;
     color: #00ffff;
   }
-  
+  header h2 {
+  font-size: 2em;
+  color: #00ffff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
   header p {
     font-size: 1.2em;
     margin-top: 10px;
