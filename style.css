@@ -1,4 +1,4 @@
-/* Reset e configurações básicas */
+/* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 .logo {
   display: block;
   margin: 0 auto 20px auto;
@@ -24,7 +25,6 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-/* Estilo do cabeçalho com imagem de fundo e overlay escuro */
 header {
   background-image: url('fundo.jpg');
   background-size: cover;
@@ -69,7 +69,7 @@ header p {
   margin-top: 10px;
 }
 
-/* Botão reutilizável */
+/* Botão */
 .btn-inscricao {
   margin: 40px auto 0 auto;
   display: inline-block;
@@ -88,6 +88,7 @@ header p {
   background: #00cccc;
 }
 
+/* Seções */
 section {
   padding: 40px 20px;
   text-align: center;
@@ -132,6 +133,7 @@ section {
   margin-top: 15px;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
@@ -140,12 +142,14 @@ footer {
   margin-top: 40px;
 }
 
+/* Formulário */
 input, select {
   padding: 10px;
   border-radius: 6px;
   border: none;
   font-size: 1em;
   font-family: 'Quicksand', sans-serif;
+  width: 100%;
 }
 
 input:focus, select:focus {
@@ -156,6 +160,8 @@ input:focus, select:focus {
 form label {
   font-weight: 600;
   text-align: left;
+  display: block;
+  margin-top: 10px;
 }
 
 form button.btn-inscricao {
@@ -167,6 +173,7 @@ form button.btn-inscricao {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  margin-top: 20px;
 }
 
 form button.btn-inscricao:hover {
@@ -185,27 +192,7 @@ form button.btn-inscricao:hover {
   text-align: center;
 }
 
-.formulario {
-  display: none;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-/* Mostrar formulários quando os radios estiverem marcados */
-#aluno:checked ~ .area-botoes-robos ~ .form-aluno {
-  display: flex;
-}
-
-#visitante:checked ~ .area-botoes-robos ~ .form-aluno + .form-visitante {
-  display: flex;
-}
-
+/* Robôs e botoes */
 .area-botoes-robos {
   display: flex;
   align-items: center;
@@ -226,12 +213,32 @@ form button.btn-inscricao:hover {
   height: auto;
 }
 
+/* Formulários ocultos */
+#form-aluno,
+#form-visitante {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#aluno:checked ~ .area-botoes-robos + #form-aluno,
+#visitante:checked ~ .area-botoes-robos + .botoes-centrais + #form-visitante {
+  display: flex;
+}
+
 .formulario h3 {
   text-align: center;
   color: #00ffff;
   margin-bottom: 10px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .area-botoes-robos {
     flex-direction: column;
