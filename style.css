@@ -182,26 +182,28 @@ form button.btn-inscricao:hover {
   text-align: center;
 }
 
-.formulario {
+/* FORMULÁRIOS OCULTOS */
+#form-aluno,
+#form-visitante {
   display: none;
   flex-direction: column;
   gap: 15px;
   text-align: left;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-#aluno:checked ~ .area-botoes-robos + #form-aluno {
+/* MOSTRAR FORMULÁRIO ALUNO */
+#aluno:checked ~ .form-aluno {
   display: flex;
 }
 
-#visitante:checked ~ .area-botoes-robos + #form-aluno + #form-visitante {
+/* MOSTRAR FORMULÁRIO VISITANTE */
+#visitante:checked ~ .form-visitante {
   display: flex;
-}
-
-.formulario h3 {
-  text-align: center;
-  color: #00ffff;
-  margin-bottom: 10px;
 }
 
 /* Robôs nas laterais */
@@ -223,6 +225,12 @@ form button.btn-inscricao:hover {
 .robo {
   width: 140px;
   height: auto;
+}
+
+.formulario h3 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
