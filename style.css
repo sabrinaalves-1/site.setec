@@ -140,7 +140,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Estilos compartilhados para inputs e selects */
 input, select {
   padding: 10px;
   border-radius: 6px;
@@ -159,9 +158,34 @@ form label {
   text-align: left;
 }
 
-/* Formulários ocultos inicialmente */
-#form-aluno,
-#form-visitante {
+form button.btn-inscricao {
+  background: #00ffff;
+  color: #000;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button.btn-inscricao:hover {
+  background: #00cccc;
+}
+
+.secao-formulario h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #00ffff;
+}
+
+.opcoes-inscricao {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.formulario {
   display: none;
   flex-direction: column;
   gap: 15px;
@@ -173,17 +197,15 @@ form label {
   margin-bottom: 40px;
 }
 
-/* Mostrar formulário do aluno quando selecionado */
-#aluno:checked ~ .area-botoes-robos + .form-aluno {
+/* Mostrar formulários quando os radios estiverem marcados */
+#aluno:checked ~ .area-botoes-robos ~ .form-aluno {
   display: flex;
 }
 
-/* Mostrar formulário do visitante quando selecionado */
-#visitante:checked ~ .area-botoes-robos + .form-aluno + .form-visitante {
+#visitante:checked ~ .area-botoes-robos ~ .form-aluno + .form-visitante {
   display: flex;
 }
 
-/* Robôs laterais e botões */
 .area-botoes-robos {
   display: flex;
   align-items: center;
@@ -210,7 +232,6 @@ form label {
   margin-bottom: 10px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .area-botoes-robos {
     flex-direction: column;
@@ -229,4 +250,3 @@ form label {
     height: auto;
   }
 }
-
