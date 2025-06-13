@@ -52,57 +52,56 @@
 
 <section class="secao-formulario">
   <h2>Preencha o formulário para se inscrever</h2>
-</section>
 
-<!-- Área dos botões com robôs laterais -->
-<div class="opcoes-inscricao" id="form-inscricao">
-  <input type="radio" name="tipo" id="aluno" hidden>
-  <input type="radio" name="tipo" id="visitante" hidden>
+  <div class="opcoes-inscricao" id="form-inscricao">
+    <input type="radio" name="tipo" id="aluno" hidden>
+    <input type="radio" name="tipo" id="visitante" hidden>
 
-  <div class="area-botoes-robos">
-    <img src="robo1.jpg" alt="Robô Esquerda" class="robo robo-esquerda">
-    
-    <div class="botoes-centrais">
-      <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
-      <label for="visitante" class="btn-inscricao">Sou visitante</label>
+    <div class="area-botoes-robos">
+      <img src="robo1.png" alt="Robô Esquerda" class="robo robo-esquerda">
+      
+      <div class="botoes-centrais">
+        <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
+        <label for="visitante" class="btn-inscricao">Sou visitante</label>
+      </div>
+
+      <img src="robo2.png" alt="Robô Direita" class="robo robo-direita">
     </div>
 
-    <img src="robo2.jpg" alt="Robô Direita" class="robo robo-direita">
+    <!-- Formulário para Aluno -->
+    <div class="formulario form-aluno">
+      <h3>Inscrição para Aluno</h3>
+      <label for="nome-aluno">Nome completo*</label>
+      <input type="text" id="nome-aluno" name="nome" required>
+      <label for="email-aluno">Email*</label>
+      <input type="email" id="email-aluno" name="email" required>
+      <label for="telefone-aluno">Telefone*</label>
+      <input type="tel" id="telefone-aluno" name="telefone" required>
+      <label for="serie-aluno">Série*</label>
+      <select id="serie-aluno" name="serie" required>
+        <option value="">Selecione</option>
+        <option value="1° ano">1° ano</option>
+        <option value="2° ano">2° ano</option>
+        <option value="3° ano">3° ano</option>
+      </select>
+      <label for="curso-aluno">Curso*</label>
+      <input type="text" id="curso-aluno" name="curso" required placeholder="Informática, Administração...">
+      <button type="submit" class="btn-inscricao">Enviar</button>
+    </div>
+
+    <!-- Formulário para Visitante -->
+    <div class="formulario form-visitante">
+      <h3>Inscrição para Visitante</h3>
+      <label for="nome-visitante">Nome completo*</label>
+      <input type="text" id="nome-visitante" name="nome" required>
+      <label for="email-visitante">Email*</label>
+      <input type="email" id="email-visitante" name="email" required>
+      <label for="telefone-visitante">Telefone*</label>
+      <input type="tel" id="telefone-visitante" name="telefone" required>
+      <button type="submit" class="btn-inscricao">Enviar</button>
+    </div>
   </div>
-
-  <!-- Formulário para Aluno -->
-  <form class="formulario" id="form-aluno">
-    <h3>Inscrição para Aluno</h3>
-    <label for="nome-aluno">Nome completo*</label>
-    <input type="text" id="nome-aluno" name="nome" required>
-    <label for="email-aluno">Email*</label>
-    <input type="email" id="email-aluno" name="email" required>
-    <label for="telefone-aluno">Telefone*</label>
-    <input type="tel" id="telefone-aluno" name="telefone" required>
-    <label for="serie-aluno">Série*</label>
-    <select id="serie-aluno" name="serie" required>
-      <option value="">Selecione</option>
-      <option value="1° ano">1° ano</option>
-      <option value="2° ano">2° ano</option>
-      <option value="3° ano">3° ano</option>
-    </select>
-    <label for="curso-aluno">Curso*</label>
-    <input type="text" id="curso-aluno" name="curso" required placeholder="Informática, Administração...">
-    <button type="submit" class="btn-inscricao">Enviar</button>
-  </form>
-
-  <!-- Formulário para Visitante -->
-  <form class="formulario" id="form-visitante">
-    <h3>Inscrição para Visitante</h3>
-    <label for="nome-visitante">Nome completo*</label>
-    <input type="text" id="nome-visitante" name="nome" required>
-    <label for="email-visitante">Email*</label>
-    <input type="email" id="email-visitante" name="email" required>
-    <label for="telefone-visitante">Telefone*</label>
-    <input type="tel" id="telefone-visitante" name="telefone" required>
-    <button type="submit" class="btn-inscricao">Enviar</button>
-  </form>
-</div>
+</section>
 
 <footer>
   📸 Siga no Instagram: <strong>@setec_colegio2025</strong><br>
