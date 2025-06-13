@@ -1,4 +1,4 @@
-/* Reset e estilos base */
+/* Reset e configurações básicas */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 .logo {
   display: block;
   margin: 0 auto 20px auto;
@@ -25,6 +24,7 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
+/* Estilo do cabeçalho com imagem de fundo e overlay escuro */
 header {
   background-image: url('fundo.jpg');
   background-size: cover;
@@ -69,7 +69,7 @@ header p {
   margin-top: 10px;
 }
 
-/* Botão */
+/* Botão reutilizável */
 .btn-inscricao {
   margin: 40px auto 0 auto;
   display: inline-block;
@@ -88,7 +88,6 @@ header p {
   background: #00cccc;
 }
 
-/* Seções */
 section {
   padding: 40px 20px;
   text-align: center;
@@ -133,7 +132,6 @@ section {
   margin-top: 15px;
 }
 
-/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
@@ -142,14 +140,13 @@ footer {
   margin-top: 40px;
 }
 
-/* Formulário */
+/* Estilos compartilhados para inputs e selects */
 input, select {
   padding: 10px;
   border-radius: 6px;
   border: none;
   font-size: 1em;
   font-family: 'Quicksand', sans-serif;
-  width: 100%;
 }
 
 input:focus, select:focus {
@@ -160,39 +157,33 @@ input:focus, select:focus {
 form label {
   font-weight: 600;
   text-align: left;
-  display: block;
-  margin-top: 10px;
 }
 
-form button.btn-inscricao {
-  background: #00ffff;
-  color: #000;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
+/* Formulários ocultos inicialmente */
+#form-aluno,
+#form-visitante {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-form button.btn-inscricao:hover {
-  background: #00cccc;
+/* Mostrar formulário do aluno quando selecionado */
+#aluno:checked ~ .area-botoes-robos + .form-aluno {
+  display: flex;
 }
 
-.secao-formulario h2 {
-  text-align: center;
-  margin-top: 40px;
-  color: #00ffff;
+/* Mostrar formulário do visitante quando selecionado */
+#visitante:checked ~ .area-botoes-robos + .form-aluno + .form-visitante {
+  display: flex;
 }
 
-.opcoes-inscricao {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Robôs e botoes */
+/* Robôs laterais e botões */
 .area-botoes-robos {
   display: flex;
   align-items: center;
@@ -211,25 +202,6 @@ form button.btn-inscricao:hover {
 .robo {
   width: 140px;
   height: auto;
-}
-
-/* Formulários ocultos */
-#form-aluno,
-#form-visitante {
-  display: none;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-#aluno:checked ~ .area-botoes-robos + #form-aluno,
-#visitante:checked ~ .area-botoes-robos + .botoes-centrais + #form-visitante {
-  display: flex;
 }
 
 .formulario h3 {
