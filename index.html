@@ -52,6 +52,8 @@
 <section class="secao-formulario">
   <h2>Preencha o formulário para se inscrever</h2>
   <div class="opcoes-inscricao" id="form-inscricao">
+
+    <!-- Inputs radios para escolher tipo -->
     <input type="radio" name="tipo" id="aluno" hidden>
     <input type="radio" name="tipo" id="visitante" hidden>
 
@@ -64,6 +66,7 @@
       <img src="robo2.jpg" alt="Robô Direita" class="robo robo-direita">
     </div>
 
+    <!-- Formulários como irmãos diretos dos inputs -->
     <div class="formulario" id="form-aluno">
       <h3>Inscrição para Aluno</h3>
       <label for="nome-aluno">Nome completo*</label>
@@ -80,7 +83,7 @@
         <option value="3° ano">3° ano</option>
       </select>
       <label for="curso-aluno">Curso*</label>
-      <input type="text" id="curso-aluno" name="curso" required placeholder="Informática, Administração...">
+      <input type="text" id="curso-aluno" name="curso" required placeholder="Desenvolvimento de sistemas, Administração, Enfermagem, Estética, Formação de docentes, Ensino medio normal.">
       <button type="submit" class="btn-inscricao">Enviar</button>
     </div>
 
@@ -94,6 +97,7 @@
       <input type="tel" id="telefone-visitante" name="telefone" required>
       <button type="submit" class="btn-inscricao">Enviar</button>
     </div>
+
   </div>
 </section>
 
@@ -104,5 +108,4 @@
 
 </body>
 </html>
-
 
