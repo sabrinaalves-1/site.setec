@@ -6,8 +6,7 @@
   <title>SETEC 2025 - Semana de Tecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
- <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
-
+<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 
 </head>
 <body>
@@ -119,19 +118,22 @@
   });
 </script>
 <script>
+ <script>
   window.addEventListener('DOMContentLoaded', () => {
-  const telefoneInputs = document.querySelectorAll('input[type="tel"]');
-  telefoneInputs.forEach(input => {
-    const im = new Inputmask("(99) 99999-9999");
-    im.mask(input);
+    const telefoneInputs = document.querySelectorAll('input[type="tel"]');
+    telefoneInputs.forEach(input => {
+      const im = new Inputmask("(99) 99999-9999");
+      im.mask(input);
+    });
   });
-});
+</script>
+
 
 </script>
 <script>
   const alunoForm = document.getElementById("form-aluno");
   const visitanteForm = document.getElementById("form-visitante");
-  const apiURL = "https://script.google.com/macros/s/AKfycbyfPwWnG19Q-1YmArwTFnAennu60ZXxCiGc72nV5XMgjb6gi40LglStcoGAyPW6oyuwOw/exec";
+  const apiURL = "https://script.google.com/macros/s/AKfycbwTj7e6n6bGVBj_bRQh2vmQX8gE-BkgRHctTscH1zIKZZ4Augv9hlwo6KbKk4mqX-bJiQ/exec";
 
   function enviarFormulario(form, tipo) {
     form.addEventListener("submit", e => {
