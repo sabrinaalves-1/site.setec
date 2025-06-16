@@ -131,8 +131,13 @@ section {
   object-fit: cover;  /* Garante que a imagem cubra a área sem distorcer */
   border-radius: 8px;
   margin-top: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
 }
-
+.card-img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
+  filter: brightness(1.2) contrast(1.1);
+}
 /* Se quiser garantir que as imagens não fiquem gigantescas no modal, adicione esse estilo */
 .modal-img {
   width: 400px;     /* igual à largura do card */
