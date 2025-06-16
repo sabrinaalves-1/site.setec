@@ -127,11 +127,21 @@ section {
 
 .card-img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 160px;  /* Tamanho fixo para a altura da imagem na card */
+  object-fit: cover;  /* Garante que a imagem cubra a área sem distorcer */
   border-radius: 8px;
   margin-top: 15px;
 }
+
+/* Se quiser garantir que as imagens não fiquem gigantescas no modal, adicione esse estilo */
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;  /* Tamanho máximo de largura para a imagem no modal */
+  max-height: 80vh;  /* Tamanho máximo de altura para a imagem no modal */
+  object-fit: contain;
+}
+
 
 /* Rodapé */
 footer {
