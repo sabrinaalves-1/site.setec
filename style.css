@@ -135,8 +135,8 @@ section {
 
 /* Se quiser garantir que as imagens não fiquem gigantescas no modal, adicione esse estilo */
 .modal-img {
-  width: 280px;     /* igual à largura do card */
-  height: 160px;    /* igual à altura do card-img */
+  width: 400px;     /* igual à largura do card */
+  height: 200px;    /* igual à altura do card-img */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 20px #00ffff;
