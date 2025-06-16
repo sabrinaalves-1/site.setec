@@ -137,19 +137,24 @@
       console.log(JSON.stringify(dados)); // mostra os dados no console
 
       
-      fetch(apiURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dados)
-      })
-      .then(res => res.text())
-      .then(() => {
-        alert("🎉 Obrigado pela inscrição! Seus dados foram enviados com sucesso.");
-        form.reset();
-      })
-      .catch(() => alert("❌ Erro ao enviar. Tente novamente."));
-    });
-  }
+     fetch(apiURL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(dados)
+})
+.then(res => {
+  if (!res.ok) throw new Error("Erro HTTP " + res.status);
+  return res.json();  // se o GAS retorna JSON
+})
+.then(data => {
+  console.log("Resposta do servidor:", data);
+  alert("🎉 Obrigado pela inscrição! Seus dados foram enviados com sucesso.");
+  form.reset();
+})
+.catch(error => {
+  console.error("Erro ao enviar dados:", error);
+  alert("❌ Erro ao enviar. Tente novamente.");
+});
 
   enviarFormulario(alunoForm, "aluno");
   enviarFormulario(visitanteForm, "visitante");
