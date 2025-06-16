@@ -158,6 +158,51 @@ document.querySelectorAll('.card-img').forEach(img => {
     });
   });
 </script>
+<script>
+  const alunoForm = document.getElementById("form-aluno");
+  const visitanteForm = document.getElementById("form-visitante");
+
+  const apiURL = "SUA_URL_DO_SCRIPT_AQUI"; // cole a URL da API aqui
+
+  function enviarFormulario(form, tipo) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nome = form.querySelector("input[name='nome']").value;
+      const email = form.querySelector("input[name='email']").value;
+      const telefone = form.querySelector("input[name='telefone']").value;
+      const serie = form.querySelector("select[name='serie']")?.value || '';
+      const curso = form.querySelector("input[name='curso']")?.value || '';
+
+      const dados = {
+        nome,
+        email,
+        telefone,
+        serie,
+        curso,
+        tipo
+      };
+
+      fetch(apiURL, {
+        method: "POST",
+        body: JSON.stringify(dados),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.text())
+      .then(res => {
+        alert("Inscrição enviada com sucesso!");
+        form.reset();
+      })
+      .catch(err => {
+        console.error("Erro:", err);
+        alert("Ocorreu um erro ao enviar.");
+      });
+    });
+  }
+
+  enviarFormulario(alunoForm, "aluno");
+  enviarFormulario(visitanteForm, "visitante");
+</script>
 
 </body>
 </html>
