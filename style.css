@@ -135,12 +135,13 @@ section {
 
 /* Se quiser garantir que as imagens não fiquem gigantescas no modal, adicione esse estilo */
 .modal-img {
-  width: 100%;
-  height: auto;
-  max-width: 600px;  /* Tamanho máximo de largura para a imagem no modal */
-  max-height: 80vh;  /* Tamanho máximo de altura para a imagem no modal */
-  object-fit: contain;
+  width: 280px;     /* igual à largura do card */
+  height: 160px;    /* igual à altura do card-img */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00ffff;
 }
+
 
 
 /* Rodapé */
