@@ -127,34 +127,35 @@
 <script>
   const alunoForm = document.getElementById("form-aluno");
   const visitanteForm = document.getElementById("form-visitante");
-  const apiURL = "https://script.google.com/macros/s/AKfycbzQxNJP40tKFGDMM4lkDJQLIA465KoMjyvjp37mR0rzJGH7zZVixFuHPEO1w09UlqgZ3g/exec";
+  const apiURL = "https://script.google.com/macros/s/AKfycbx-Fhj32Mzz6l1_YYI37gul8mDt3T7Vk6kW9VI6VbEkdNUKM3TxdxgBnsD9MK3QRnDCRw/exec";
 
   function enviarFormulario(form, tipo) {
     form.addEventListener("submit", e => {
       e.preventDefault();
       const dados = Object.fromEntries(new FormData(form));
       dados.tipo = tipo;
-      console.log(JSON.stringify(dados)); // mostra os dados no console
+      console.log(JSON.stringify(dados));
 
-      
-     fetch(apiURL, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(dados)
-})
-.then(res => {
-  if (!res.ok) throw new Error("Erro HTTP " + res.status);
-  return res.json();  // se o GAS retorna JSON
-})
-.then(data => {
-  console.log("Resposta do servidor:", data);
-  alert("🎉 Obrigado pela inscrição! Seus dados foram enviados com sucesso.");
-  form.reset();
-})
-.catch(error => {
-  console.error("Erro ao enviar dados:", error);
-  alert("❌ Erro ao enviar. Tente novamente.");
-});
+      fetch(apiURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados)
+      })
+      .then(res => {
+        if (!res.ok) throw new Error("Erro HTTP " + res.status);
+        return res.json();
+      })
+      .then(data => {
+        console.log("Resposta do servidor:", data);
+        alert("🎉 Obrigado pela inscrição! Seus dados foram enviados com sucesso.");
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Erro ao enviar dados:", error);
+        alert("❌ Erro ao enviar. Tente novamente.");
+      });
+    });
+  }
 
   enviarFormulario(alunoForm, "aluno");
   enviarFormulario(visitanteForm, "visitante");
