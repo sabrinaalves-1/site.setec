@@ -6,11 +6,7 @@
   <title>SETEC 2025 - Semana de Tecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
-
 </head>
-
-  
 <body>
 
 <header>
@@ -23,187 +19,101 @@
 </header>
 
 <section class="secao-tema-sobre">
-  <h2>Sobre a SETEC</h2>
-  <p>A Semana de Tecnologia do Colégio Estadual Barbosa Ferraz é um evento anual que visa estimular o interesse dos estudantes pela inovação, programação, robótica e demais áreas tecnológicas. Com oficinas práticas, competições e palestras, a SETEC prepara jovens para os desafios do futuro.</p>
-</section>
-
-<section class="secao-tema-sobre">
   <h2>✨ Tema: "Tecnologia e Inteligência Artificial"</h2>
-  <div class="destaques">
-    <div class="card">
-      <h3>🤖 Atividades Lógicas</h3>
-      <p>Resolva desafios reais em equipe e mostre seu talento!</p>
-      <img src="setec.jpg" alt="Hackathon Escolar" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>🎮 Arena Gamer</h3>
-      <p>Competições, realidade virtual e muita diversão garantida!</p>
-      <img src="setec1.jpg" alt="Arena Gamer" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>💡 Oficinas Práticas</h3>
-      <p>Robótica, Programação, Impressão 3D e mais atividades hands-on.</p>
-      <img src="setec2.jpg" alt="Oficinas Práticas" class="card-img" />
-    </div>
-    <div class="card">
-      <h3>🎙️ Palestrantes</h3>
-      <p>Profissionais da área tech compartilhando experiências incríveis.</p>
-      <img src="setec3.jpg" alt="Palestrantes" class="card-img" />
-    </div>
-  </div>
 </section>
 
 <section class="secao-formulario">
   <h2>Preencha o formulário para se inscrever</h2>
   <div class="opcoes-inscricao" id="form-inscricao">
 
-    <!-- Inputs radios para escolher tipo -->
     <input type="radio" name="tipo" id="aluno" hidden>
     <input type="radio" name="tipo" id="visitante" hidden>
 
     <div class="area-botoes-robos">
-      <img src="robo1.jpg" alt="Robô Esquerda" class="robo robo-esquerda">
-      <div class="botoes-centrais">
-        <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
-        <label for="visitante" class="btn-inscricao">Sou visitante</label>
-      </div>
-      <img src="robo2.jpg" alt="Robô Direita" class="robo robo-direita">
+      <label for="aluno" class="btn-inscricao">Sou aluno do Barbosa</label>
+      <label for="visitante" class="btn-inscricao">Sou visitante</label>
     </div>
 
-    <!-- Formulários como irmãos diretos dos inputs -->
-    <div class="formulario" id="form-aluno">
+    <form class="formulario" id="form-aluno">
       <h3>Inscrição para Aluno</h3>
-      <label for="nome-aluno">Nome completo*</label>
-      <input type="text" id="nome-aluno" name="nome" required>
-      <label for="email-aluno">Email*</label>
-      <input type="email" id="email-aluno" name="email" required>
-      <label for="telefone-aluno">Telefone*</label>
-      <input type="tel" id="telefone-aluno" name="telefone" required>
-      <label for="serie-aluno">Série*</label>
-      <select id="serie-aluno" name="serie" required>
+      <label>Nome completo*</label>
+      <input type="text" name="nome" required>
+      <label>Email*</label>
+      <input type="email" name="email" required>
+      <label>Telefone*</label>
+      <input type="tel" name="telefone" required>
+      <label>Série*</label>
+      <select name="serie" required>
         <option value="">Selecione</option>
-        <option value="1° ano">1° ano</option>
-        <option value="2° ano">2° ano</option>
-        <option value="3° ano">3° ano</option>
+        <option value="1º ano">1º ano</option>
+        <option value="2º ano">2º ano</option>
+        <option value="3º ano">3º ano</option>
       </select>
-      <label for="curso-aluno">Curso*</label>
-      <input type="text" id="curso-aluno" name="curso" required placeholder="Desenvolvimento de sistemas, Administração...">
+      <label>Curso*</label>
+      <input type="text" name="curso" required>
       <button type="submit" class="btn-inscricao">Enviar</button>
-    </div>
+    </form>
 
-    <div class="formulario" id="form-visitante">
+    <form class="formulario" id="form-visitante">
       <h3>Inscrição para Visitante</h3>
-      <label for="nome-visitante">Nome completo*</label>
-      <input type="text" id="nome-visitante" name="nome" required>
-      <label for="email-visitante">Email*</label>
-      <input type="email" id="email-visitante" name="email" required>
-      <label for="telefone-visitante">Telefone*</label>
-      <input type="tel" id="telefone-visitante" name="telefone" required>
+      <label>Nome completo*</label>
+      <input type="text" name="nome" required>
+      <label>Email*</label>
+      <input type="email" name="email" required>
+      <label>Telefone*</label>
+      <input type="tel" name="telefone" required>
       <button type="submit" class="btn-inscricao">Enviar</button>
-    </div>
+    </form>
 
   </div>
 </section>
- 
+
+<!-- Modal de imagem omitido para foco no form -->
+
+<!-- InputMask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 <script>
-  // Modal de imagem
-document.querySelectorAll('.card-img').forEach(img => {
-  img.addEventListener('click', () => {
-    const modal = document.createElement('div');
-    modal.style.position = 'fixed';
-    modal.style.top = 0;
-    modal.style.left = 0;
-    modal.style.width = '100vw';
-    modal.style.height = '100vh';
-    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    modal.style.display = 'flex';
-    modal.style.alignItems = 'center';
-    modal.style.justifyContent = 'center';
-    modal.style.zIndex = 9999;
-
-    const modalImg = document.createElement('img');
-    modalImg.src = img.src;
-    modalImg.classList.add('modal-img');
-
-    modal.appendChild(modalImg);
-    document.body.appendChild(modal);
-
-    modal.addEventListener('click', () => {
-      modal.remove();
-    });
-  });
-});
-
-</script>
-<script>
-  // Máscara de telefone
-  const telefoneInputs = document.querySelectorAll('input[type="tel"]');
-  telefoneInputs.forEach(input => {
-    Inputmask({ mask: "(99) 99999-9999" }).mask(input);
-  });
-
-  // Validação básica de email (opcional, já tem via HTML)
-  const emailInputs = document.querySelectorAll('input[type="email"]');
-  emailInputs.forEach(input => {
-    input.addEventListener('blur', () => {
-      if (!input.value.includes('@')) {
-        alert('Email inválido');
-      }
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("input[type='tel']").forEach(input => {
+      Inputmask("(99) 99999-9999").mask(input);
     });
   });
 </script>
-<script>
-  const alunoForm = document.getElementById("form-aluno");
-  const visitanteForm = document.getElementById("form-visitante");
 
-  const apiURL = "https://script.google.com/macros/s/AKfycbzJ0eUvUDV-7kQq1Lq4Ze-qKTsSItUiqvRtRVj3CbTPdsG3ZyUIT37YoZnwHDtiv3fQQw/exec"; // cole a URL da API aqui
+<!-- Script de envio -->
+<script>
+  const apiURL = "https://script.google.com/macros/s/AKfycbwW2YC4Jeufv8rh3ENNtVfw94noQMAnYevQCOlUbpKfXx4V987n7ajcKi8GvekhepSMEQ/exec"; // Troque pela sua URL
 
   function enviarFormulario(form, tipo) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const nome = form.querySelector("input[name='nome']").value;
-      const email = form.querySelector("input[name='email']").value;
-      const telefone = form.querySelector("input[name='telefone']").value;
-      const serie = form.querySelector("select[name='serie']")?.value || '';
-      const curso = form.querySelector("input[name='curso']")?.value || '';
-
-      const dados = {
-        nome,
-        email,
-        telefone,
-        serie,
-        curso,
-        tipo
-      };
+      const formData = new FormData(form);
+      const dados = Object.fromEntries(formData.entries());
+      dados.tipo = tipo;
 
       fetch(apiURL, {
         method: "POST",
-        body: JSON.stringify(dados),
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados)
       })
       .then(res => res.text())
-      .then(res => {
-        alert("Inscrição enviada com sucesso!");
+      .then(() => {
+        alert("Obrigado pela inscrição! Seus dados foram enviados com sucesso.");
         form.reset();
       })
-      .catch(err => {
-        console.error("Erro:", err);
-        alert("Ocorreu um erro ao enviar.");
-      });
+      .catch(() => alert("Erro ao enviar. Tente novamente mais tarde."));
     });
   }
 
-  enviarFormulario(alunoForm, "aluno");
-  enviarFormulario(visitanteForm, "visitante");
+  enviarFormulario(document.getElementById("form-aluno"), "aluno");
+  enviarFormulario(document.getElementById("form-visitante"), "visitante");
 </script>
 
 <footer>
-  📸 Siga no Instagram: <strong>@setec_colegio2025</strong><br>
-  📧 Contato: <strong>setec.colegio@gmail.com</strong>
+  📸 Instagram: @setec_colegio2025 | 📧 Email: setec.colegio@gmail.com
 </footer>
 
- 
 </body>
 </html>
 
