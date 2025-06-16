@@ -6,7 +6,11 @@
   <title>SETEC 2025 - Semana de Tecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+
 </head>
+
+  
 <body>
 
 <header>
@@ -105,6 +109,57 @@
   📸 Siga no Instagram: <strong>@setec_colegio2025</strong><br>
   📧 Contato: <strong>setec.colegio@gmail.com</strong>
 </footer>
+
+  
+<script>
+  // Modal de imagem
+  document.querySelectorAll('.card-img').forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.createElement('div');
+      modal.style.position = 'fixed';
+      modal.style.top = 0;
+      modal.style.left = 0;
+      modal.style.width = '100vw';
+      modal.style.height = '100vh';
+      modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+      modal.style.display = 'flex';
+      modal.style.alignItems = 'center';
+      modal.style.justifyContent = 'center';
+      modal.style.zIndex = 9999;
+
+      const modalImg = document.createElement('img');
+      modalImg.src = img.src;
+      modalImg.style.maxWidth = '90%';
+      modalImg.style.maxHeight = '90%';
+      modalImg.style.borderRadius = '10px';
+      modalImg.style.boxShadow = '0 0 20px #00ffff';
+
+      modal.appendChild(modalImg);
+      document.body.appendChild(modal);
+
+      modal.addEventListener('click', () => {
+        modal.remove();
+      });
+    });
+  });
+</script>
+<script>
+  // Máscara de telefone
+  const telefoneInputs = document.querySelectorAll('input[type="tel"]');
+  telefoneInputs.forEach(input => {
+    Inputmask({ mask: "(99) 99999-9999" }).mask(input);
+  });
+
+  // Validação básica de email (opcional, já tem via HTML)
+  const emailInputs = document.querySelectorAll('input[type="email"]');
+  emailInputs.forEach(input => {
+    input.addEventListener('blur', () => {
+      if (!input.value.includes('@')) {
+        alert('Email inválido');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
