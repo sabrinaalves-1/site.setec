@@ -260,3 +260,12 @@ form button.btn-inscricao:hover {
     height: auto;
   }
 } 
+.robo {
+  width: 180px; /* antes era 140px */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.robo:hover {
+  transform: scale(1.1);
+}
