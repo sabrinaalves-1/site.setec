@@ -134,7 +134,9 @@
       e.preventDefault();
       const dados = Object.fromEntries(new FormData(form));
       dados.tipo = tipo;
+      console.log(JSON.stringify(dados)); // mostra os dados no console
 
+      
       fetch(apiURL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
