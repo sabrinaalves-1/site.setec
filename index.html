@@ -136,7 +136,7 @@
     form.addEventListener("submit", e => {
       e.preventDefault();
       const dados = Object.fromEntries(new FormData(form));
-      dados.tipo = tipo;
+      dados.tipo = Tipo;
       const formData = new URLSearchParams(dados);
 
       fetch(apiURL, {
