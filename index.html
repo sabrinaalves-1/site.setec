@@ -6,8 +6,7 @@
   <title>SETEC 2025 - Semana de Tecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
-
+  <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 </head>
 <body>
 
@@ -100,7 +99,16 @@
 </section>
 
 <script>
-// Modal imagem
+  // Máscara de telefone
+  window.addEventListener('DOMContentLoaded', () => {
+    const telefoneInputs = document.querySelectorAll('input[type="tel"]');
+    telefoneInputs.forEach(input => {
+      const im = new Inputmask("(99) 99999-9999");
+      im.mask(input);
+    });
+  });
+
+  // Modal de imagem
   document.querySelectorAll('.card-img').forEach(img => {
     img.addEventListener('click', () => {
       const modal = document.createElement('div');
@@ -116,22 +124,12 @@
       document.body.appendChild(modal);
     });
   });
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const telefoneInputs = document.querySelectorAll('input[type="tel"]');
-    telefoneInputs.forEach(input => {
-      const im = new Inputmask("(99) 99999-9999");
-      im.mask(input);
-    });
-  });
-</script>
 
-
-</script>
-<script>
+  // Envio de formulário corrigido
   const alunoForm = document.getElementById("form-aluno");
   const visitanteForm = document.getElementById("form-visitante");
+
+  // ⬇️ Substitua por seu link FINAL do Google Apps Script (copie do botão "Implantar > Nova implantação")
   const apiURL = "https://script.google.com/macros/s/AKfycbwqgW8SUVZPHEkmjsiAVSdGyML9mFfSSUL0TFlbRnGOXo5UPjvGnEqa5x7gvIh3sH09/exec";
 
   function enviarFormulario(form, tipo) {
@@ -139,12 +137,14 @@
       e.preventDefault();
       const dados = Object.fromEntries(new FormData(form));
       dados.tipo = tipo;
-      console.log(JSON.stringify(dados));
+      const formData = new URLSearchParams(dados);
 
       fetch(apiURL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dados)
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: formData.toString()
       })
       .then(res => {
         if (!res.ok) throw new Error("Erro HTTP " + res.status);
@@ -173,4 +173,3 @@
 
 </body>
 </html>
-
